@@ -712,7 +712,7 @@ endif
 # <fstype>=<fstype_opts>[|<fstype_opts>]...
 # fstype_opts := <opt>[,<opt>]...
 #         opt := <name>[=<value>]
-# The following worked on Nexus devices with Kernel 3.1, 3.4, 3.10
+# The following worked on NOSP devices with Kernel 3.1, 3.4, 3.10
 DEFAULT_TARGET_RECOVERY_FSTYPE_MOUNT_OPTIONS := ext4=max_batch_time=0,commit=1,data=ordered,barrier=1,errors=panic,nodelalloc
 
 ifneq (true,$(TARGET_USERIMAGES_SPARSE_EXT_DISABLED))
@@ -1601,7 +1601,7 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(DISTTOOLS)
 	   $(if $(OEM_OTA_CONFIG), -o $(OEM_OTA_CONFIG)) \
 	   $(BUILT_TARGET_FILES_PACKAGE) $@
 
-CUSTOM_TARGET_PACKAGE := $(PRODUCT_OUT)/pure_$(TARGET_PRODUCT)-$(NEXUS_VERSION).zip
+CUSTOM_TARGET_PACKAGE := $(PRODUCT_OUT)/nosp_$(TARGET_PRODUCT)-$(NOSP_VERSION).zip
 
 .PHONY: otapackage bacon
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
