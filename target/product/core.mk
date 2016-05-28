@@ -22,6 +22,7 @@
 
 PRODUCT_PACKAGES += \
     BasicDreams \
+    Calendar \
     CalendarProvider \
     CaptivePortalLogin \
     CertInstaller \
